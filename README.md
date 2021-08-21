@@ -7,6 +7,5 @@ FEATURES;
 2. Event types to include house parties, hangouts, parties, cinema outinga, karaoke, and custom
 3. Add ticketing features to events, and a QR code feature to verify payments upon event participation
 4. Event integration to other social media apps
-5.
 
 This is a current overview. Updates are to be expected
