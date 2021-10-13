@@ -53,6 +53,8 @@ eventDuration
 
 ## Sample Event <a name = "sample"></a>
 
+
+```
 Passing sample parameters to the createEvent request
 
 const myEvent = new event({
@@ -68,6 +70,7 @@ minParticipants: '1'
 isEventFree/ticketFee: 'No', {splitBills}, {30%:70%}
 eventDuration: '3Hrs'
 })
+```
 
 
 ## Attendiing Events <a name = "attend"></a>
