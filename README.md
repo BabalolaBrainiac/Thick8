@@ -1,4 +1,4 @@
-# T
+# Thick8
 
 ## Table of Contents
 + [About](#about)
