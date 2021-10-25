@@ -1,29 +1,50 @@
 import axios from "axios";
 import React, { Component } from "react";
+import {
+  Nav,
+  NavLink,
+  Bars,
+  NavMenu,
+  NavBtn,
+  NavBtnLink,
+} from './navElements.js'
 
 class Navigation extends React.Component {
   constructor() {
     super();
     this.state = {
-      Name: "Undefined",
+      userName: "Anonymous",
     };
   }
-  handleClick = () => {
-    axios.get("/users/new").then((res) => {
-      this.setState({
-        Name: res.data.name,
-      });
-      console.log(res.data)
-    });
-  };
   render() {
     return (
-      <div>
-        <h1>This Application is being written by {this.state.Name}</h1>
-        <button onClick={this.handleClick}>Click to turn it see name</button>
-      </div>
+      <React.Fragment>
+        <> 
+        <Nav>
+          <Bars/>
+
+          <NavMenu>
+          <NavLink to = '/' activeStyle className= 'nav-home'>
+              Tikketi
+            </NavLink>
+          <NavLink to = '/how' activeStyle>
+              How It Works
+            </NavLink>
+            <NavLink to = '/signup' activeStyle>
+              Signup
+            </NavLink>
+            <NavLink to = '/login' activeStyle>
+              Login
+            </NavLink>
+          </NavMenu>
+        </Nav>
+        
+        </>
+        
+      </React.Fragment>
     );
   }
 }
 
 export default Navigation;
+  
