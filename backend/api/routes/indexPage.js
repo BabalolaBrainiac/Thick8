@@ -1,12 +1,16 @@
 const express = require("express");
 const router = express.Router();
-
-
+const User = require('../models/users')
 
 
 //Homepage
-router.get('/index', (req, res, next) => {
-    if (req) {
-      res.status(200).json('Tiketti: Create Your Own Fun')
-    }
-  })
+router.get('/', async (req, res, next) => {
+  const {username, email} = req.body
+  await User.find(email).exec().then((user) => {
+    
+    console.log(user)
+  }).catch(err)
+
+  })  
+
+  module.exports = router;
